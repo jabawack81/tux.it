@@ -1,0 +1,12 @@
+<h1>tux.it url shortener</h1>
+<form method=post>
+  <input name="url" type=text />
+  <input type=submit value=Shout>
+</form>
+<% unless @urls.nil? %>
+<ol>
+  <% @urls.each do |url| %>
+  <li> <%= url.address %> => <a href="/<%= url.mini %>"><%= url.mini%></a>(<%= url.views.count %>)</li>
+  <% end %>
+</ol>
+<% end %>
