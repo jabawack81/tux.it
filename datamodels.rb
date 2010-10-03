@@ -1,8 +1,7 @@
 require 'dm-core'
 
-
 #DataMapper.setup(:default, "appengine://auto")
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://my.db')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://tmp/tuxit.db')
 
 class Url  
   include DataMapper::Resource
