@@ -1,15 +1,14 @@
 require 'dm-core'
+require './urls.rb'
 
-#DataMapper.setup(:default, "appengine://auto")
 DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://tmp/tuxit.db')
 
 class Url  
   include DataMapper::Resource
-  @@chars = ('a'..'z').to_a + ('A'..'Z').to_a + ('0'..'9').to_a + ['_','-']
+  include UrlMinifier
   
   property :id,         Serial
   property :address,    String
-  property :mini,       String, :unique => true
   property :remote_ip,  String
   property :created,    DateTime
 
@@ -22,17 +21,11 @@ class Url
       return "http://#{@address}"
     end
   end
-  
-  before :save do  
-    mini = ''
-    4.times {mini += get_rnd_char}
-    @mini = mini
+
+  def mini
+    to_mini(@id)
   end
   
-  private
-  def get_rnd_char
-    @@chars[Kernel.rand(@@chars.size)]
-  end
 end
 
 class View
