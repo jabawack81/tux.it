@@ -5,7 +5,7 @@ require './helpers.rb'
 
 
 get '/' do
-  redirect 'http://tux.it'  if request.host == 'www.tux.it'
+  redirect 'http://tux.it'  if @request.host == 'www.tux.it'
   erb :index
 end
 
@@ -21,9 +21,9 @@ get '/:mini' do
   View.create(
     :url => url,
     :access_time => Time.now, 
-    :referrer => request.referrer || '',
-    :user_agent => request.user_agent || '',
-    :remote_ip => request.ip || '0.0.0.0')
+    :referrer => @request.referrer ,
+    :user_agent => @request.user_agent ,
+    :remote_ip => @request.ip )
     
   redirect url.address
 end
@@ -34,7 +34,7 @@ post '/' do
     @url = Url.create(
         :address => params[:url], 
         :created => Time.now, 
-        :remote_ip => request.ip)
+        :remote_ip => @request.ip)
   end
   erb :created
 end
