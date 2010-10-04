@@ -29,10 +29,13 @@ get '/:mini' do
 end
 
 post '/' do
-  @url = Url.create(
-      :address => params[:url], 
-      :created => Time.now, 
-      :remote_ip => request.ip)
+  @url = Url.get_by_mini(params[:mini])
+  if @url.nil?
+    @url = Url.create(
+        :address => params[:url], 
+        :created => Time.now, 
+        :remote_ip => request.ip)
+  end
   erb :created
 end
 
