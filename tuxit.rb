@@ -29,7 +29,7 @@ get '/:mini' do
 end
 
 post '/' do
-  @url = Url.get_by_mini(params[:mini])
+  @url = Url.first(:address => params[:url])
   if @url.nil?
     @url = Url.create(
         :address => params[:url], 
