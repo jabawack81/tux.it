@@ -23,11 +23,11 @@ class Url
   end
 
   def mini
-    to_mini(@id)
+    UrlMinifier.to_mini(@id)
   end
   
   def get_by_mini(mini)
-    get to_num(mini)
+    get UrlMinifier.to_num(mini)
   end
 end
 
