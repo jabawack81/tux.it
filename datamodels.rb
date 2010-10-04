@@ -26,7 +26,7 @@ class Url
     UrlMinifier.to_mini(@id)
   end
   
-  def get_by_mini(mini)
+  def self.get_by_mini(mini)
     get UrlMinifier.to_num(mini)
   end
 end
