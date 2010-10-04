@@ -1,8 +1,9 @@
 <h1>tux.it url shortener</h1>
-<form method=post>
+<form method=post action="/">
   <input name="url" type=text />
   <input type=submit value=Shout>
 </form>
+
 <% unless @urls.nil? %>
 <ol>
   <% @urls.each do |url| %>
@@ -10,3 +11,5 @@
   <% end %>
 </ol>
 <% end %>
+
+<%= p ENV %>
