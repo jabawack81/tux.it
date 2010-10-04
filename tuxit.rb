@@ -5,7 +5,7 @@ require './helpers.rb'
 
 
 get '/' do
-  redirect 'http://tux.it'  if ENV['url'] == 'www.tux.it'
+  redirect 'http://tux.it'  if ENV['URL'] == 'www.tux.it'
   erb :index
 end
 
