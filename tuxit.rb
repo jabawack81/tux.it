@@ -18,12 +18,12 @@ get '/:mini' do
   url = Url.get_by_mini(params[:mini])
   pass if url.nil?
 
-#  View.create(
-#    :url => url,
-#    :access_time => Time.now, 
-#    :referrer => request.referrer,
-#    :user_agent => request.user_agent)
-    #:remote_ip => request.ip)
+  View.create(
+    :url => url,
+    :access_time => Time.now, 
+    :referrer => request.referrer || '',
+    :user_agent => request.user_agent || '',
+    :remote_ip => request.ip || '0.0.0.0')
     
   redirect url.address
 end
