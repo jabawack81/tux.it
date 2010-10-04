@@ -1,3 +1,3 @@
-<h1><%= @url.address%></h1>
+<h1><%= h @url.address%></h1>
 is now accessible via:
-<a href="http://tux.it/<%= @url.mini %>">http://tux.it/<%= @url.mini%></a>
+<a href="http://tux.it/<%= h @url.mini %>">http://tux.it/<%= h @url.mini%></a>

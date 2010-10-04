@@ -6,10 +6,13 @@
 
 <% unless @urls.nil? %>
 <ol>
-  <% @urls.each do |url| %>
-  <li> <%= url.address %> => <a href="/<%= url.mini %>"><%= url.mini%></a>(<%= url.views.count %>)</li>
-  <% end %>
+  <%- @urls.each do |url| -%>
+  <li> <%= h url.address %> => <a href="/<%= h url.mini %>"><%= h url.mini%></a>(<%= h url.views.count %>)</li>
+  <%- end -%>
 </ol>
 <% end %>
-
-<%= p ENV %>
+<ul>
+<% ENV.each do |e| %>
+  <li><%= e %></li>
+<% end%>
+</ul>
