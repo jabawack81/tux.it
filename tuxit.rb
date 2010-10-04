@@ -21,10 +21,10 @@ get '/:mini' do
     View.create(
       :url => url,
       :access_time => Time.now, 
-      :referrer => ENV['REFERRER'],
-      :user_agent => ENV['USER_AGENT'],
-      :remote_ip => ENV['REMOTE_ADDR'])
-    redirect url.address, 302
+      :referrer => request.referer,
+      :user_agent => request.user_agent,
+      :remote_ip => request.ip
+    redirect url.address, 301
   else
     redirect '/'
   end
