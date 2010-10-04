@@ -6,9 +6,9 @@
 
 <% unless @urls.nil? %>
 <ol>
-  <%- @urls.each do |url| -%>
+  <% @urls.each do |url| %>
   <li> <%= h url.address %> => <a href="/<%= h url.mini %>"><%= h url.mini%></a>(<%= h url.views.count %>)</li>
-  <%- end -%>
+  <% end %>
 </ol>
 <% end %>
 <ul>
