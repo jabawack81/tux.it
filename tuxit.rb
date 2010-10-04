@@ -23,7 +23,7 @@ get '/:mini' do
       :access_time => Time.now, 
       :referrer => request.referer,
       :user_agent => request.user_agent,
-      :remote_ip => request.ip
+      :remote_ip => request.ip)
     redirect url.address, 301
   else
     redirect '/'
