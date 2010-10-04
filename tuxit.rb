@@ -22,7 +22,7 @@ get '/:mini' do
     :url => url,
     :access_time => Time.now,
     :referrer => @request.referrer,
-    :user_agent => @request.user_agent)
+    :user_agent => @request.useragent)
 #    :remote_ip => @request.ip )
     
   redirect url.address
