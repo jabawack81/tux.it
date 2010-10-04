@@ -1,7 +1,8 @@
 require 'dm-core'
+require 'dm-aggregates'
 require './urls.rb'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://tmp/tuxit.db')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3:///tmp/tuxit.sqlite3')
 
 class Url  
   include DataMapper::Resource
