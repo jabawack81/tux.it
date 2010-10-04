@@ -30,12 +30,8 @@ get '/:mini' do
 end
 
 post '/' do
-  if validate_url(params[:url])
-    @url = Url.create :address => params[:url], :created => Time.now
-    erb :created
-  else
-    redirect '/'
-  end
+  @url = Url.create :address => params[:url], :created => Time.now
+  erb :created
 end
 
 not_found do

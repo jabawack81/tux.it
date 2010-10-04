@@ -7,6 +7,8 @@ class Url
   include DataMapper::Resource
   include UrlMinifier
   
+  before :save, :fix_address
+
   property :id,         Serial
   property :address,    Text
   property :remote_ip,  String
@@ -14,20 +16,19 @@ class Url
 
   has n, :views
   
-  def address
-    if @address.match('^https?:\/\/')
-      return @address
-    else
-      return "http://#{@address}"
-    end
-  end
-
   def mini
     UrlMinifier.to_mini(@id)
   end
   
   def self.get_by_mini(mini)
     get UrlMinifier.to_num(mini)
+  end
+  
+  private 
+  def fix_address
+    unless @address.match('^https?:\/\/')
+      @address = "http://#{@address}"
+    end
   end
 end
 
