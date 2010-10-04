@@ -20,8 +20,8 @@ get '/:mini' do
 
   View.create(
     :url => url,
-    :access_time => Time.now)
-#    :referrer => @request.referrer ,
+    :access_time => Time.now,
+    :referrer => @request.referrer)
 #    :user_agent => @request.user_agent ,
 #    :remote_ip => @request.ip )
     
