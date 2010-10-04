@@ -14,7 +14,7 @@ get '/show_all' do
 end
 
 get '/:mini' do
-  url = Url.first(:mini => params[:mini])
+  url = Url.get_by_mini(params[:mini])
   pass if url.nil?
   if url
     View.create(

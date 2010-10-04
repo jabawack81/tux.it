@@ -26,6 +26,9 @@ class Url
     to_mini(@id)
   end
   
+  def get_by_mini(mini)
+    get to_num(mini)
+  end
 end
 
 class View
