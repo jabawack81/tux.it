@@ -11,7 +11,7 @@ class Url
   before :save, :fix_address
 
   property :id,         Serial
-  property :address,    String
+  property :address,    Text
   property :remote_ip,  String
   property :created,    DateTime
 
