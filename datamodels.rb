@@ -6,7 +6,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3:///tmp/tuxit.sqlite3'
 
 class Url  
   include DataMapper::Resource
-  include UrlMinifier
+ # include UrlMinifier
   
   before :save, :fix_address
 
@@ -26,13 +26,18 @@ class Url
   end
   
   def self.get_by_address(url)
-    get :url => add_http_to_url_if_needed(url)
+    get :url => Url.add_http_to_url_if_needed(url)
   end
   
   private
   def fix_address
-    @address = add_http_to_url_if_needed(@address)
+    @address = Url.add_http_to_url_if_needed(@address)
   end
+  
+  def self.add_http_to_url_if_needed(address)
+    address = "http://#{address}"  unless address.match('^https?:\/\/')
+    address
+  end  
 end
 
 class View

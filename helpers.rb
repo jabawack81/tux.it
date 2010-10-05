@@ -5,11 +5,6 @@ helpers do
   
   def validate_url(url)
     true
-  end  
-  
-  def add_http_to_url_if_needed(address)
-    address = "http://#{address}"  unless address.match('^https?:\/\/')
-    address
-  end
+  end    
 end
 
