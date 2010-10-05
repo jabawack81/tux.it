@@ -25,6 +25,7 @@ module UrlMinifier
     decimal = 0
     pos=mini.size-1
     mini.split(//).each{ |c| 
+      next unless @@chars.include? c
       decimal += @@chars.index(c) * (@@chars.size**pos)
       pos -= 1
     }
