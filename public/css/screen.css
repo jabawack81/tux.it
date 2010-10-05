@@ -78,6 +78,10 @@ body {
 	margin:0;
 	padding:0;
 	}
+#answer {
+  margin-top: 25px;
+  display:block;
+}
 form {
 	position:relative;
 	display:inline;

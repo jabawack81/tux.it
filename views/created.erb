@@ -1,4 +1,6 @@
 <%= erb :index, :layout => false %>
+<div id="answer">
 <h1><%= h @url.address%></h1>
 is now accessible via:
 <a href="http://<%= request.host %>/<%= h @url.mini %>">http://<%= request.host %>/<%= h @url.mini%></a>
+</div>
