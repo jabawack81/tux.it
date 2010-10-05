@@ -30,7 +30,7 @@ class Url
   end
   
   private 
-  def fix_address
+  def self.fix_address
     unless @address.match('^https?:\/\/')
       @address = "http://#{@address}"
     end
