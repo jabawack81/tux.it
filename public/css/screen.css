@@ -82,6 +82,10 @@ body {
   margin-top: 25px;
   display:block;
 }
+#answer h1 {
+  position: relative;
+}
+
 form {
 	position:relative;
 	display:inline;
