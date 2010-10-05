@@ -26,18 +26,16 @@ class Url
   end
   
   def self.get_by_address(url)
-    get :url => check_http_address(url)
+    #TODO: fix url adding http:// when needed
+    get :url => url #fix_address(url)
   end
   
   private 
-  def self.check_http_address(url)
-    url = "http://#{url}" unless url.match('^https?:\/\/')
-    url
-  end
-  
   def fix_address
-    @address = Url.check_http_address(@address)
-  end
+    unless @address.match('^https?:\/\/')
+      @address = "http://#{@address}"
+    end
+  end  
 end
 
 class View
