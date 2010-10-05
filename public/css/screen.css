@@ -78,14 +78,6 @@ body {
 	margin:0;
 	padding:0;
 	}
-#answer {
-  margin-top: 25px;
-  display:block;
-}
-#answer h1 {
-  position: relative;
-}
-
 form {
 	position:relative;
 	display:inline;
@@ -121,10 +113,37 @@ input {
 	position:fixed;
 	bottom:0;
 	left:0;
-	background:url('/img/fbkg.gif') top center repeat-x #6c8000;
+	background:url('../img/fbkg.gif') top center repeat-x #6c8000;
 	text-align:center;
 	color:#fff;
 	height:150px;
 	width:100%;
+	}
+#answer {
+	width:400px;
+	margin:30px auto 0 auto;
+	padding:20px;
+	background-color:#fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border-bottom:2px solid #647700;
+	border-left:1px solid #91ab00;
+	border-right:1px solid #91ab00;
+	}
+#answer h1 {
+	position:static;
+	top:0;
+	left:0;
+	color:#000;
+	font-size:1em;
+	}
+#answer a,#answer a:hover {
+	display:block;
+	color:#6c8000;
+	font-size:2em;
+	text-decoration:none;
+	background-color:#ffc;
+	padding:2px 5px;
 	}
 /* @end */
