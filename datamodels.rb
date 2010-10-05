@@ -25,6 +25,10 @@ class Url
     get UrlMinifier.to_num(mini)
   end
   
+  def self.get_by_address(url)
+    get :url => fix_address(url)
+  end
+  
   private 
   def fix_address
     unless @address.match('^https?:\/\/')

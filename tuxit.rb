@@ -22,14 +22,14 @@ get '/:mini' do
     :url => url,
     :access_time => Time.now,
     :referrer => request.referrer,
-#    :user_agent => @request.useragent)
+#    :user_agent => request.user_agent,
     :remote_ip => request.ip )
     
   redirect url.address
 end
 
 post '/' do
-  @url = Url.first(:address => params[:url])
+  @url = Url.get_by_address(params[:url])
   if @url.nil?
     @url = Url.create(
         :address => params[:url], 
