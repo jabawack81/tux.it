@@ -29,10 +29,10 @@ get '/:mini' do
 end
 
 post '/' do
-  @url = Url.get_by_address(params[:url])
+  @url = Url.get_by_address(add_http_to_url_if_needed(params[:url]))
   if @url.nil?
     @url = Url.create(
-        :address => params[:url], 
+        :address => add_http_to_url_if_needed(params[:url]), 
         :created => Time.now, 
         :remote_ip => request.ip)
   end
