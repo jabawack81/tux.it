@@ -1,5 +1,0 @@
-h1. About tux.it
-
-"tux.it":http://tux.it is an open source url shortener (with a bunch of ideas for the future).
-
-The goal of the project is to collect funds for the Linux Foundation and give to "Tux":http://en.wikipedia.org/wiki/Tux , our favourite penguin, the deserved fame.
