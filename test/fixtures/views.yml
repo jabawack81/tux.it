@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url_id: 1
+  access_time: 2010-10-09 17:56:48
+  referrer: MyString
+  user_agent: MyString
+  remote_ip: MyString
+
+two:
+  url_id: 1
+  access_time: 2010-10-09 17:56:48
+  referrer: MyString
+  user_agent: MyString
+  remote_ip: MyString

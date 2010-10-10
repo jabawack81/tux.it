@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+  <head> 
+    <title>tux.it url shortener</title>
+    <meta charset=utf-8 /> 
+    <meta name="keywords" content="tux, url shortner " />
+    <meta name="author" content="Enrico Rubboli - template by Roberto Kalamun Pasini" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <%= csrf_meta_tag %>    
+    <%= stylesheet_link_tag 'screen' %>
+    <%= javascript_include_tag 'layout' %>
+  </head>
+  
+  <body>
+    <%= flash_div %>
+    
+    <div id="container">
+      <%= yield %>
+    </div>
+    
+    <footer>
+      <div id="footer">
+        <p>
+          &copy; <a href="http://www.rubboli.it/">Enrico Rubboli</a> | designed by <a href="http://www.kalamun.org">Kalamun</a> |  hosted by <a href="http://www.heroku.com"><img src="/images/heroku.gif" alt="Heroku" width="54" height="17" /></a> | webfont by <a href="http://www.josbuivenga.demon.nl/">Exljbris</a><br />
+          <a href="http://github.com/dn2k/tux.it">Project Source Code</a> | <a href="http://github.com/dn2k/tux.it/issues"> Report a bug </a>
+        </p>
+      </div>
+    </footer>
+    
+  <script>    
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-534341-8']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+  </script>
+
+  </body>
+</html>
