@@ -14,7 +14,7 @@ class RootController < ApplicationController
       @showurl.save!
       flash[:notice] = "URL minified"
     else
-      flash[:notice] = "URL already present"
+      flash[:notice] = "URL already minified"
     end
     respond_to do |format|
       format.html {redirect_to minified_path(:mini => @showurl.minified) }
