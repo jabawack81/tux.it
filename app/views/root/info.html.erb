@@ -1,8 +1,8 @@
 <%= render :partial => 'form'%>
 <h1><%= @showurl.address %></h1>
 <div id="stats">
-<li><%= image_tag(@chart)  %></li>
-
+  <ul>
+  <li><%= image_tag(@chart)  %></li>
   <% @showurl.views.each do |view|  %>
   <li> <%= view.created_at %> / <%= view.user_agent %> </li>
   <% end %>
