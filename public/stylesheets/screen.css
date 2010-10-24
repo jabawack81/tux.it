@@ -69,7 +69,7 @@ body {
 	}
 #container {
 	text-align:center;
-	padding-top:100px;
+	padding-top:20px;
 	}
 #container h1 {
 	position:absolute;
@@ -110,17 +110,16 @@ input {
 	padding-top:5px;
 	}
 #footer {
-	position:fixed;
 	bottom:0;
 	left:0;
 	background:url('/images/fbkg.gif') top center repeat-x #6c8000;
 	text-align:center;
 	color:#fff;
-	height:150px;
+	height:90px;
 	width:100%;
 	}
 #answer {
-	width:400px;
+	width:500px;
 	margin:30px auto 0 auto;
 	padding:20px;
 	background-color:#fff;
@@ -145,5 +144,8 @@ input {
 	text-decoration:none;
 	background-color:#ffc;
 	padding:2px 5px;
+	}
+#answer input {
+	text-align: center
 	}
 /* @end */
