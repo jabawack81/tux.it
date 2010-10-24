@@ -1,5 +1,7 @@
 .bundle
 .rvmrc
+.redcar/*
 db/*.sqlite3
 log/*.log
 tmp/**/*
+.gitignore
