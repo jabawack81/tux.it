@@ -39,6 +39,7 @@ class RootController < ApplicationController
   #this will provide stats info about the url
   def info
     @showurl = Url.find_by_mini(params[:mini])
+    @chart = @showurl.get_stats_chart
     if @showurl.nil?
       flash[:notice] = "URL not found"
       redirect_to root_path
