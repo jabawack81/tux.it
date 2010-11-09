@@ -1,6 +1,6 @@
 class RootController < ApplicationController
 
-  respond_to :html, :xml, :json
+  respond_to :html, :xml, :json, :rjs
 
   def index
   end
@@ -16,11 +16,7 @@ class RootController < ApplicationController
     else
       flash[:notice] = "URL already minified"
     end
-    respond_to do |format|
-      format.html {redirect_to minified_path(:mini => @showurl.minified) }
-      format.json {render :json => @showurl.to_json(request.host) }
-      format.xml  {render :xml => @showurl.to_xml(request.host) }
-    end    
+      render :partial => 'create'
   end
 
   def show
@@ -30,9 +26,7 @@ class RootController < ApplicationController
       redirect_to root_path
     end
     respond_to do |format|
-      format.html 
-      format.json {render :json => @showurl.to_json(request.host) }
-      format.xml  {render :xml => @showurl.to_xml(request.host) }
+      format.js
     end    
   end
   
@@ -73,6 +67,6 @@ class RootController < ApplicationController
   end
   
   def new
-    
+
   end
 end
