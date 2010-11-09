@@ -16,7 +16,12 @@ class RootController < ApplicationController
     else
       flash[:notice] = "URL already minified"
     end
-      render :partial => 'create'
+    respond_to do |format|
+	format.html 
+     	format.json {render :json => @showurl.to_json(request.host) }
+     	format.xml  {render :xml => @showurl.to_xml(request.host) }
+	format.js
+    end  
   end
 
   def show
@@ -26,8 +31,10 @@ class RootController < ApplicationController
       redirect_to root_path
     end
     respond_to do |format|
-      format.js
-    end    
+	format.html 
+     	format.json {render :json => @showurl.to_json(request.host) }
+     	format.xml  {render :xml => @showurl.to_xml(request.host) }
+    end  
   end
   
   #this will provide stats info about the url
