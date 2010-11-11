@@ -10,7 +10,11 @@
     <link rel="shortcut icon" href="/favicon.png" />
     <%= csrf_meta_tag %>    
     <%= stylesheet_link_tag 'screen' %>
-    <%= javascript_include_tag 'layout' %>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+    	google.load("jquery", "1.4.3");
+    </script>
+    <%= javascript_include_tag 'rails' %>  
   </head>
   
   <body>
@@ -20,7 +24,7 @@
     <div id="container">
       <%= yield %>
     </div>
-    
+
     <footer>
       <div id="footer">
 	<p style="font-size:12pt;color:yellow">Warning: This URL shortener is still in development. Database may be reset at any time.</p>
