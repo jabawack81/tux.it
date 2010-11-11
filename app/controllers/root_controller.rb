@@ -23,7 +23,10 @@ class RootController < ApplicationController
         format.js
       end  
     else
-      redirect_to root_path  
+      respond_to do |format|
+        format.html {redirect_to root_path}  
+        format.js {render :inline => "alert('url is empty')"}
+      end
     end
   end
 
