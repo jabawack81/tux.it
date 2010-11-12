@@ -3,10 +3,7 @@
 <h1><%= @showurl.address%></h1>
 
 <p>is now accessible via: <input type="url" value="http://<%= request.host %>/<%=  @showurl.minified %>" size="15" /></p>
+<p><%= image_tag("http://#{request.host}/#{@showurl.minified}.qr")  %> code for QR: <input type="text" value='<img alt="<%=@showurl.minified %>" src="http://<%= request.host %>/<%=  @showurl.minified %>.qr" /> ' size="35" /></p>
 
-<p><%= image_tag("http://#{request.host}/#{@showurl.minified}.qr")  %> code for this QR tag:
-  <textarea><%= image_tag("http://#{request.host}/#{@showurl.minified}.qr") %></textarea>
-</p>
-
-<p>link stats <a href="<%= info_path(@showurl.minified)%>"> here</a></p>
+<p><a href="<%= info_path(@showurl.minified)%>"> link stats</a></p>
 </div>
