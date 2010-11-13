@@ -1,7 +1,8 @@
 class Url < ActiveRecord::Base
   has_many  :views
   before_save :fix_address
-  
+  validates_presence_of :address
+
   #characters mapping to ID, base 65
   CHARS = ["3", "W", "b", "m", "w", "9", "d", "B", "p", 
            "0", "o", "u", "y", "7", "V", "N", "a", "s", 
@@ -73,8 +74,9 @@ class Url < ActiveRecord::Base
 
   #TODO: convert to model validation
   def self.has_valid_TLD?(address) 
-    url = URI.parse address
-    TLDS.member? url.host.split('.').last
+    #url = URI.parse address
+    #TLDS.member? url.host.split('.').last
+    true
   end
   
   def to_json(request_host)
