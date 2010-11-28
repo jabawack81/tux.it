@@ -141,10 +141,8 @@ input {
 	}
 #answer a,#answer a:hover {
 	display:block;
-	color:#6c8000;
-	font-size:2em;
-	text-decoration:none;
-	background-color:#ffc;
+  color:#6c8000;  
+  text-decoration:none;
 	padding:2px 5px;
 	}
 #answer input {

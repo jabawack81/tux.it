@@ -44,6 +44,9 @@ class RootController < ApplicationController
     end  
   end
   
+  def show_all
+  end
+  
   #this will provide stats info about the url
   def info
     @showurl = Url.find_by_mini(params[:mini])
