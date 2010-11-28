@@ -45,6 +45,7 @@ class RootController < ApplicationController
   end
   
   def show_all
+    @urls = Url.all
   end
   
   #this will provide stats info about the url

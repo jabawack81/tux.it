@@ -7,7 +7,7 @@
     <th> created at </th>
     <th> info </th>
   </tr>
-<% Url.all.each do |u| %>
+<% @urls.each do |u| %>
   <tr>
     <td> <%= u.id %> </td>
     <td> <%= u.minified %> </td>
