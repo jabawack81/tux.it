@@ -121,9 +121,9 @@ input {
   position:fixed;
 	}
 #answer {
-	width:500px;
+  width:650px;
 	margin:30px auto 0 auto;
-	padding:20px;
+	padding:30px;
 	background-color:#fff;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
@@ -131,7 +131,7 @@ input {
 	border-bottom:2px solid #647700;
 	border-left:1px solid #91ab00;
 	border-right:1px solid #91ab00;
-	}
+  }
 #answer h1 {
 	position:static;
 	top:0;

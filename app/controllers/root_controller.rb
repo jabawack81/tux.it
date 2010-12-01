@@ -46,7 +46,8 @@ class RootController < ApplicationController
   
   def show_all
     @urls = Url.all
-  end
+    @views = @urls.inject(0){|s,u|s + u.views.all.count}
+  end  
   
   #this will provide stats info about the url
   def info
