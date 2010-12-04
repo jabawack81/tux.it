@@ -16,11 +16,7 @@
   <tr>
     <td> <%= u.id %> </td>
     <td> <%= u.minified %> </td>
-    <% if u.address.length >= 70 %>
-    <td> <%=link_to(u.address[0,70]+'...',root_path+u.minified) %></td>
-    <% else %>
-    <td> <%=link_to(u.address,root_path+u.minified) %></td>
-    <%end%>
+    <td> <%=link_to(truncate(u.address, :length=>70, :omission => '...'),root_path+u.minified) %></td>
     <td> <%= u.created_at.strftime('%d %b %Y - %H:%M') %> </td>
     <td> <%= u.views.all.count %></td>
     <td> <%= (u.views.all.count/((Time.now - u.created_at)/86400)).round(2)%></td>
