@@ -13,34 +13,34 @@ class RootController < ApplicationController
         format.js {render :inline => "alert('Please insert a valid URL')"}
       end
     else
-      @showurl = Url.find_by_address(p)
-      if @showurl.nil?
-        @showurl = Url.create(params[:url])
-        @showurl.remote_ip = request.ip
-        @showurl.save!
+      @entry = Url.find_by_address(p)
+      if @entry.nil?
+        @entry = Url.create(params[:url])
+        @entry.remote_ip = request.ip
+        @entry.save!
         flash[:notice] = "URL minified"
       else
         flash[:notice] = "URL already minified"
       end
       respond_to do |format|
         format.html 
-        format.json {render :json => @showurl.to_json(request.host) }
-        format.xml  {render :xml => @showurl.to_xml(request.host) }
+        format.json {render :json => @entry.to_json(request.host) }
+        format.xml  {render :xml => @entry.to_xml(request.host) }
         format.js
       end      
     end
   end
 
   def show
-    @showurl = Url.find_by_mini(params[:mini])
-    if @showurl.nil?
+    @entry = Url.find_by_mini(params[:mini])
+    if @entry.nil?
       flash[:notice] = "URL not found"
       redirect_to root_path
     end
     respond_to do |format|
 	    format.html 
-     	format.json {render :json => @showurl.to_json(request.host) }
-     	format.xml  {render :xml => @showurl.to_xml(request.host) }
+      format.json {render :json => @entry.to_json(request.host) }
+      format.xml  {render :xml => @entry.to_xml(request.host) }
     end  
   end
   
@@ -51,16 +51,16 @@ class RootController < ApplicationController
   
   #this will provide stats info about the url
   def info
-    @showurl = Url.find_by_mini(params[:mini])
-    @chart = @showurl.get_stats_chart
-    if @showurl.nil?
+    @entry = Url.find_by_mini(params[:mini])
+    @chart = @entry.get_stats_chart
+    if @entry.nil?
       flash[:notice] = "URL not found"
       redirect_to root_path
     end
     respond_to do |format|
       format.html 
-      format.json {render :json => @showurl.to_json(request.host) }
-      format.xml  {render :xml => @showurl.to_xml(request.host) }
+      format.json {render :json => @entry.to_json(request.host) }
+      format.xml  {render :xml => @entry.to_xml(request.host) }
     end
   end
   
@@ -74,7 +74,7 @@ class RootController < ApplicationController
       View.create!(
         :url_id => url.id,
         :access_time => Time.now,
-        :referrer => request.env["REFERER"],
+        :referrer => request.env["HTTP_REFERER"],
         :user_agent => request.env["HTTP_USER_AGENT"],
         :remote_ip => request.remote_ip )
         
