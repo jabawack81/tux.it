@@ -69,7 +69,7 @@ class Url < ActiveRecord::Base
     hit.reverse!
     hit_s = hit.join(',')
     days = (0..6).inject('') {|d,n| d + "|" + (Time.now.midnight - ((6-n)*5).day).strftime("%d %b")}
-    "http://chart.apis.google.com/chart?chxl=0:"+days+"&chxp=0,1,5,10,15,20,25,30&chxr=0,1,30&chxs=0,000000,12.5,0,l,676767&chxt=x&chs=400x300&cht=lc&chco=1500FF&chds=0,"+hit.max.to_s+"&chd=t:"+hit_s+"&chls=1&chtt=Page+views+in+the+last+31+days"
+    "http://chart.apis.google.com/chart?chf=bg,s,EFEFFF&chxl=0:"+days+"&chxp=0,1,5,10,15,20,25,30&chxr=0,1,30&chxs=0,000000,12.5,0,l,676767&chxt=x&chs=400x300&cht=lc&chco=1500FF&chds=0,"+hit.max.to_s+"&chd=t:"+hit_s+"&chls=1&chtt=Page+views+in+the+last+31+days"
   end  
   
   def get_views(n)
