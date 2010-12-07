@@ -11,7 +11,7 @@
     <% @entry.views.each do |view|  %>
     <tr>
       <td> <%= view.created_at.strftime('%d %b %Y - %H:%M') %> </td>
-      <td> <%= view.referrer %> </td>
+      <td> <%= link_to(view.referrer,view.referrer) %> </td>
       <td> <%= view.user_agent %> </td>
     </tr>
     <% end %>
