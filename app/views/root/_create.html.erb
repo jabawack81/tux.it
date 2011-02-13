@@ -1,9 +1,14 @@
 <%= render :partial => 'form'%>
 <div id="answer">
 <h1><%= @entry.address%></h1>
-
+<div id="sezione">
 <p>is now accessible via: <input type="url" value="http://<%= request.host %>/<%=  @entry.minified %>" size="15" /></p>
-<p><%= image_tag("http://#{request.host}/#{@entry.minified}.qr")  %> code for QR: <input type="text" value='<img alt="<%=@entry.minified %>" src="http://<%= request.host %>/<%=  @entry.minified %>.qr" /> ' size="35" /></p>
-
-<p><a href="<%= info_path(@entry.minified)%>"> link stats</a></p>
+</div>
+<div id="sezione">
+<p><%= image_tag("http://#{request.host}/#{@entry.minified}.qr")  %> code for this QR tag:
+  <input type=url value='<%= image_tag("http://#{request.host}/#{@entry.minified}.qr") %>' />
+</p>
+</div>
+<br/>
+<p>link stats <a href="<%= info_path(@entry.minified)%>"> here</a></p>
 </div>
