@@ -229,3 +229,8 @@ div.footer2 a:hover {
 #shout {
 	margin:.3em -10em 0em -10em;
 }
+div#sezione a {
+  text-decoration:none;
+  color:black;
+  /* color: #5F666A; */
+  }
