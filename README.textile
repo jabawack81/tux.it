@@ -1,6 +1,6 @@
 h1. About tux.it
 
-"tux.it":http://tux.it is an open source url shortener written in Ruby on Rails.
+"tux.it":http://tux.it is an open source url shortener written in Ruby on Rails 3.
 
 The goal of the project is to support FOSS culture and give "Tux":http://en.wikipedia.org/wiki/Tux , our favourite penguin, the deserved fame.
 
