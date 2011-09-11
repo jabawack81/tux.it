@@ -45,8 +45,10 @@ class RootController < ApplicationController
   end
   
   def show_all
-    @urls = Url.all
-    @views = @urls.inject(0){|s,u|s + u.views.all.count}
+    @number_of_urls = Url.all
+    @views = @number_of_urls.inject(0){|s,u|s + u.views.all.count}
+    @urls = Url.page(params[:page]).per(10)
+
   end  
   
   #this will provide stats info about the url

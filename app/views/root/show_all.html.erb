@@ -1,5 +1,6 @@
+<%= paginate @urls %>
 <div id="answer">
-  <p> There are <b><%= @urls.count %></b> minified urls, and a total of <b><%= @views %></b> views. </p>
+  <p> There are <b><%= @number_of_urls.count %></b> minified urls, and a total of <b><%= @views %></b> views. </p>
   
 <table>
   <tr>
@@ -19,7 +20,11 @@
     <td> <%= link_to(truncate(u.address, :length=>70, :omission => '...'),root_path+u.minified) %></td>
     <td> <%= u.created_at.strftime('%d %b %Y - %H:%M') %> </td>
     <td> <%= u.views.all.count %></td>
-    <td> <%= (u.views.all.count/((Time.now - u.created_at)/86400)).round(2)%></td>
+    <td> <%if Time.now - u.created_at < 86400 %>
+            <%= u.views.all.count %>
+         <% else %>
+            <%= (u.views.all.count/((Time.now - u.created_at)/86400)).round(2)%></td>
+         <% end %>
     <td> <%= u.get_views(31)%></td>
     <% if(u.views.last.nil?) %>
     <td> not available </td>
