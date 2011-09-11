@@ -6,6 +6,7 @@ class RootController < ApplicationController
   end
   
   def create
+    @header = 'Enter the URL:'
     p = params[:url][:address]
     if p.empty?
       respond_to do |format|
@@ -45,9 +46,10 @@ class RootController < ApplicationController
   end
   
   def show_all
-    @number_of_urls = Url.all
-    @views = @number_of_urls.inject(0){|s,u|s + u.views.all.count}
-    @urls = Url.page(params[:page]).per(10)
+    number_of_urls = Url.all
+    views = number_of_urls.inject(0){|s,u|s + u.views.all.count}
+    @header = "There are #{number_of_urls.count} minified urls, and a total of #{views} views"
+    @urls = Url.page(params[:page]).per(20)
 
   end  
   

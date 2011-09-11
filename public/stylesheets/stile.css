@@ -3,7 +3,7 @@
 body { 
 	margin:0;
 	font-family: Arial, sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 /* Titolo di primo livello */
@@ -44,9 +44,9 @@ h2 a {
 }
 
 /* Paragrafo generico */
-p {
+p, th {
 	font-family: corbel;
-	font-size: 110%;
+	font-size: 100%;
 	padding:0.1em 0.3em;
 	margin:0;
 }
@@ -66,7 +66,7 @@ li {
 }
 
 div#header {
-	position:fixed;
+/*  position:fixed;*/
 	top:80px;
 	width:100%;
 	vertical-align:middle;
@@ -88,9 +88,9 @@ div#header {
 div#block {
 	left:0;
 	right:0;
-	margin: 13em auto;
-	padding: 3px;
-	width: 60%;
+	margin: 100px auto;
+	padding: 0 25px 25px 25px;
+	width: 80%;
 	align:absmiddle;
 	border: 1px solid #DDD;
 	text-align:left;
@@ -179,11 +179,8 @@ div#sezione {
 
 div#footer {
 	width:100%;
-	bottom: 0px;
-	position: fixed;
-    text-align: center;
-	border-top:4px solid #FFD133;
-	font-family: corbel;}
+  text-align: center;
+  border-top:4px solid #FFD133;}
 	 
 div.footer1 {
 	padding:0.3em;
@@ -238,3 +235,21 @@ div#sezione a {
   color:black;
   /* color: #5F666A; */
   }
+
+table {
+  width:100%;
+}
+td {
+  padding: 5px;
+}
+a:link, a:visited {
+  text-decoration:none;
+  color:#09f;
+}
+a:hover{
+  text-decoration:underline;}
+  
+footer {
+  position:relative;
+  bottom:0;
+  border:0;}

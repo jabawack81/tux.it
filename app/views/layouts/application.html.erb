@@ -2,7 +2,7 @@
 <html lang="en"> 
 
   <head> 
-<a href="http://github.com/dn2k/tux.it"><img style="position: fixed; top: 0; right: 0; border: 0;z-index:1;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+<a href="http://github.com/dn2k/tux.it"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:1;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
     <title>tux.it url shortener</title>
     <meta charset=utf-8 /> 
     <meta name="keywords" content="tux, url shortner " />
@@ -47,9 +47,10 @@ function MM_swapImage() { //v3.0
   <body onLoad="MM_preloadImages('images/pulsante2.png')">
     <%= flash_div %>
     
-    <div style="width:100%; position:fixed; top:0; height:80px; text-align:center; background-color: #4E4D4D"><a href="http://tux.it"><img src="images/titolo.png" alt="tux.it URL shortener" align="absmiddle" style="margin:0 -5em 0 -5em; width:315"></a></div>
+    <div style="width:100%; top:0; height:80px; text-align:center; background-color: #4E4D4D"><a href="http://tux.it"><img src="images/titolo.png" alt="tux.it URL shortener" align="absmiddle" style="margin:0 -5em 0 -5em; width:315"></a></div>
     <div id="header" style="background-color:#FFD137;font-size:13px"><h2>a simple and open-source url shortener</h2></div>
-    <div id="block"><p>Enter the URL:</p>
+    <div id="block">
+      <p style='text-align:center; padding:10px; font-size:15px; color:black'><%= block_header %></p>
     
     <div id="container" style="text-align:center">
       <%= yield %>
@@ -65,9 +66,9 @@ function MM_swapImage() { //v3.0
     		<div class="footer2"> 
           		<a href="http://github.com/dn2k/tux.it">source code</a> | 
 			<a href="http://github.com/dn2k/tux.it/issues"> report a bug </a>+
-		</div>
+    </div>
     	</div>
-    <a href="http://www.tux.it"><img style="position:fixed; bottom:0; left:0.2em; border:0;" src="images/tuxbig.png" alt="Tux.it, the URL shortner" /></a> 
+      <a href="http://www.tux.it"><img style="position:absolute; bottom:0px; left:0px; border:0" src="images/tuxbig.png" alt="Tux.it, the URL shortner" /></a> 
     </footer>
     
   <script>    

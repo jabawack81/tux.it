@@ -3,7 +3,7 @@
 <h1><%= @entry.address%></h1>
 
 <p>is now accessible via: <input type="url" value="http://<%= request.host %>/<%=  @entry.minified %>" size="15" /></p>
-<p><%= image_tag("http://#{request.host}/#{@entry.minified}.qr")  %> code for QR: <input type="text" value='<img alt="<%=@entry.minified %>" src="http://<%= request.host %>/<%=  @entry.minified %>.qr" /> ' size="35" /></p>
+<p style="padding:10px"><%= image_tag("http://#{request.host}/#{@entry.minified}.qr")  %> code for QR: <input type="text" value='<img alt="<%=@entry.minified %>" src="http://<%= request.host %>/<%=  @entry.minified %>.qr" /> ' size="35" /></p>
 
 <span style="font-size:2em; background-color:#ffc"><a href="<%= info_path(@entry.minified)%>"> link stats</a></span>
 </div>

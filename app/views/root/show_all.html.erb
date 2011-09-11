@@ -1,13 +1,12 @@
 <%= paginate @urls %>
 <div id="answer">
-  <p> There are <b><%= @number_of_urls.count %></b> minified urls, and a total of <b><%= @views %></b> views. </p>
-  
-<table>
+<table id="all">
   <tr>
     <th> ID &nbsp; </th>
-    <th> &nbsp; minified url </th>
+    <th> <p>minified url</p>
+      <p>(click to show stats)</p></th>
     <th> address </th>
-    <th> created at </th>
+    <th> creation date </th>
     <th> total views </th>
     <th> views/day</th>
     <th> last 31 days</th>
@@ -17,7 +16,7 @@
   <tr>
     <td> <%= u.id %> </td>
     <td> <%= link_to(u.minified, root_path+u.minified+".show") %> </td>
-    <td> <%= link_to(truncate(u.address, :length=>70, :omission => '...'),root_path+u.minified) %></td>
+    <td> <%= link_to(truncate(u.address[7..-1], :length=>70, :omission => '...'),root_path+u.minified) %></td>
     <td> <%= u.created_at.strftime('%d %b %Y - %H:%M') %> </td>
     <td> <%= u.views.all.count %></td>
     <td> <%if Time.now - u.created_at < 86400 %>
