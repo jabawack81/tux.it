@@ -75,13 +75,6 @@ class Url < ActiveRecord::Base
   def get_views(n)
     views.where(:created_at => (Time.now.midnight- n.day)..Time.now).count
   end
-
-  #TODO: convert to model validation
-  def self.has_valid_TLD?(address) 
-    #url = URI.parse address
-    #TLDS.member? url.host.split('.').last
-    true
-  end
   
   def to_json(request_host)
     {:address => address, :minified => 'http://'+request_host+'/'+minified}.to_json

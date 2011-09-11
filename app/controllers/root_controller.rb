@@ -7,7 +7,7 @@ class RootController < ApplicationController
   
   def create
     p = params[:url][:address]
-    if p.empty? || !Url.has_valid_TLD?(p)
+    if p.empty?
       respond_to do |format|
         format.html {redirect_to root_path}  
         format.js {render :inline => "alert('Please insert a valid URL')"}
