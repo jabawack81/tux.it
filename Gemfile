@@ -17,10 +17,7 @@ gem 'rails', '3.0.0'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
-group :development do
-  gem 'ruby-debug'
-end
-
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'ruby-debug19'
 end
