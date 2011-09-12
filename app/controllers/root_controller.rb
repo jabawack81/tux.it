@@ -5,6 +5,9 @@ class RootController < ApplicationController
   def index
   end
   
+  def credits
+  end
+  
   def create
     @header = 'Enter the URL:'
     p = params[:url][:address]
