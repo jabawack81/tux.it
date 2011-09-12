@@ -52,7 +52,7 @@ class RootController < ApplicationController
     number_of_urls = Url.all
     views = number_of_urls.inject(0){|s,u|s + u.views.all.count}
     @header = "There are #{number_of_urls.count} minified urls, and a total of #{views} views"
-    @urls = Url.page(params[:page]).per(20)
+    @urls = Url.order('id DESC').page(params[:page]).per(20)
 
   end  
   
