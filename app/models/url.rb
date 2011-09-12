@@ -11,24 +11,7 @@ class Url < ActiveRecord::Base
            "l", "U", "X", "g", "t", "z", "6", "C", "K", 
            "2", "-", "e", "c", "Z", "H", "r", "M", "A", 
            "1", "G", "j", "4", "5", "x", "E", "S", "q", 
-           "L", "J"]
-            
-  TLDS = ['ac','ad','ae','aero','af','ag','ai','al','am','an','ao','aq','ar','arpa','as','asia','at','au','aw','ax','az',
-	'ba','bb','bd','be','bf','bg','bh','bi','biz','bj','bm','bn','bo','br','bs','bt','bv','bw','by','bz','ca','cat',
-	'cc','cd','cf','cg','ch','ci','ck','cl','cm','cn','co','com','coop','cr','cu','cv','cx','cy','cz','de','dj','dk',
-	'dm','do','dz','ec','edu','ee','eg','er','es','et','eu','fi','fj','fk','fm','fo','fr','ga','gb','gd','ge','gf','gg',
-	'gh','gi','gl','gm','gn','gov','gp','gq','gr','gs','gt','gu','gw','gy','hk','hm','hn','hr','ht','hu','id','ie','il',
-	'im','in','info','int','io','iq','ir','is','it','je','jm','jo','jobs','jp','ke','kg','kh','ki','km','kn','kp','kr',
-	'kw','ky','kz','la','lb','lc','li','lk','lr','ls','lt','lu','lv','ly','ma','mc','md','me','mg','mh','mil','mk','ml',
-	'mm','mn','mo','mobi','mp','mq','mr','ms','mt','mu','museum','mv','mw','mx','my','mz','na','name','nc','ne','net',
-	'nf','ng','ni','nl','no','np','nr','nu','nz','om','org','pa','pe','pf','pg','ph','pk','pl','pm','pn','pr','pro','ps',
-	'pt','pw','py','qa','re','ro','rs','ru','rw','sa','sb','sc','sd','se','sg','sh','si','sj','sk','sl','sm','sn','so',
-	'sr','st','su','sv','sy','sz','tc','td','tel','tf','tg','th','tj','tk','tl','tm','tn','to','tp','tr','travel','tt',
-	'tv','tw','tz','ua','ug','uk','us','uy','uz','va','vc','ve','vg','vi','vn','vu','wf','ws','xn--0zwm56d','xn--11b5bs3a9aj6g',
-	'xn--80akhbyknj4f','xn--9t4b11yi5a','xn--deba0ad','xn--fiqs8s','xn--fiqz9s','xn--fzc2c9e2c','xn--g6w251d','xn--hgbk6aj7f53bba',
-	'xn--hlcj6aya9esc7a','xn--j6w193g','xn--jxalpdlp','xn--kgbechtv','xn--kprw13d','xn--kpry57d','xn--mgbaam7a8h',
-	'xn--mgbayh7gpa','xn--mgberp4a5d4ar','xn--o3cw4h','xn--p1ai','xn--pgbs0dh','xn--wgbh1c','xn--xkc2al3hye2a',
-	'xn--ygbi2ammx','xn--zckzah','ye','yt','za','zm','zw']            
+           "L", "J"]                    
   
   def minified
     num = self.id
