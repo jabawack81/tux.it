@@ -28,29 +28,28 @@ h1 {
 
 /* Titolo di secondo livello */
 h2 {
-  margin:0;
-  text-align:center;
+  margin: 0;
+  text-align: center;
   color: #58585A;
   font-family: Bebas, Arial, sans-serif;
-  font-weight:normal;
-  font-size: 100%;
-  /* text-transform: uppercase; */
-  text-shadow: white 0px 1px 0px;
+  font-weight: normal;
+  font-size: 13px
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
   word-spacing: 0.3em;
 }
 
 h2 a {
   color: white;
   text-decoration:none;
-  text-shadow: black 0px 1px 0px;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.8);
 }
 
 /* Paragrafo generico */
 p, th {
   font-family: corbel;
   font-size: 100%;
-  padding:0.1em 0.3em;
-  margin:0;
+  padding: 0.1em 0.3em;
+  margin: 0;
 }
 
 img {
@@ -69,16 +68,17 @@ li {
 
 div#header {
   /*  position:fixed;*/
-  top:80px;
-  width:100%;
-  vertical-align:middle;
-  padding-bottom:0.3em;
-  font-weight:bold;
-  text-align:center;
+  top: 80px;
+  width: 100%;
   vertical-align: middle;
-  color:#333;
-  border-top:1px solid white;
-  border-bottom:1px solid #F39323;
+  padding-bottom: 0.3em;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: #333;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #F39323;
+  background-color: #FFD137;
   background:-moz-linear-gradient(90deg, #F9B239, #FFD137, #FFDA5F);
   background:-webkit-gradient(linear, center top, center bottom, from(#FFDA5F), color-stop(60%,#FFD137), to(#F9B239));
   text-shadow: white 1px 1px 0px;
