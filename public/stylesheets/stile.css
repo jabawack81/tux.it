@@ -36,6 +36,7 @@ h2 {
   font-size: 100%;
   /* text-transform: uppercase; */
   text-shadow: white 0px 1px 0px;
+  word-spacing: 0.3em;
 }
 
 h2 a {
