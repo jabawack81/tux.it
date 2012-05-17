@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
+gem 'newrelic_rpm'
 
 gem 'kaminari'
 
@@ -21,6 +22,5 @@ gem 'kaminari'
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
-  gem 'ruby-debug19'
 end
 
