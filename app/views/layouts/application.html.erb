@@ -3,24 +3,27 @@
 
 <head>
   <title>tux.it url shortener</title>
-  <meta charset=utf-8 />
-  <meta name="keywords" content="tux, url shortner " />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="keywords" content="tux, url shortner" />
+  <meta name="description" content="tux.it is a simple and free (as in freedom) url shortener" />
   <meta name="author" content="Enrico Rubboli, Davide Taviani, Antonio Pedroni" />
-  <meta name="revisit-after" content="7 days" />
-  <link rel="shortcut icon" href="/favicon.png" />
+  <meta name="designer" content="Giuseppe Gerbino" />
+  <meta name="category" content="computers and internet" />
+  <meta name="language" content="english" />
+  <link rel="shortcut icon" href="/images/tuxlittle.gif" />
   <%= csrf_meta_tag %>
   <%= render 'layouts/stylesheets' %>
   <a href="http://github.com/dn2k/tux.it">
-    <img style="position: absolute; top: 0; right: 0; border: 0;z-index:1;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+    <img style="position:absolute; top:0; right:0; border:0; z-index:1;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
   </head>
 
 <body onLoad="MM_preloadImages('images/pulsante2.png')">
 
 <div id="wrap">
 
-<div style="width:100%; top:0; height:80px; text-align:center; background-color: #4E4D4D">
+<div style="width:100%; top:0; height:80px; text-align:center; background-color:#4E4D4D">
   <%= link_to image_tag('titolo.png', :class => 'titolo'), root_path %></a></div>
-  <div id="header" style="background-color:#FFD137;font-size:13px"><h2>a simple and free (as in freedom) url shortener</h2></div>
+  <div id="header" style="font-size:13px"><h2>a simple and free (as in freedom) url shortener</h2></div>
   <div id="block">
     <%= flash_div %>
     <p style='text-align:center; padding:10px; font-size:15px; color:black'><%= block_header %></p>
