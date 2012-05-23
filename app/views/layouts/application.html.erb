@@ -21,9 +21,10 @@
 
 <div id="wrap">
 
-<div style="width:100%; top:0; height:80px; text-align:center; background-color:#4E4D4D">
-  <%= link_to image_tag('titolo.png', :class => 'titolo'), root_path %></a></div>
-  <div id="header" style="font-size:13px"><h2>a simple and free (as in freedom) url shortener</h2></div>
+<header>
+  <%= link_to image_tag('titolo.png', :class => 'titolo'), root_path %></a>
+</header>
+  <div id="header"><h2>a simple and free (as in freedom) url shortener</h2></div>
   <div id="block">
     <%= flash_div %>
     <p style='text-align:center; padding:10px; font-size:15px; color:black'><%= block_header %></p>
